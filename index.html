@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="loginBtn" id="btn">
+            <p id="user">
+                <img src="img/user-3.ico" alt="not found">
+            </p>
+            <p>
+                <span class="span" id="l">L</span>
+                <span class="span" id="o">O</span>
+                <span class="span" id="g">G</span>
+                <span class="span" id="i">I</span>
+                <span class="span" id="n">N</span>
+            </p>
+        </div>
+
+        <!-- Form -->
+
+        <form id="form" action="#" target="_blank">
+            <div id="loginFormBtn" class="loginFormBtn">
+                <p id="user">
+                    <img src="img/user-3.ico" alt="not found">
+                </p>
+                <p>
+                    <span class="span" id="l2">L</span>
+                    <span class="span" id="o2">O</span>
+                    <span class="span" id="g2">G</span>
+                    <span class="span" id="i2">I</span>
+                    <span class="span" id="n2">N</span>
+                </p>
+            </div>
+            <div id="formBody" class="formBody">
+                <p>
+                    <input type="text" placeholder="username" name="username" id="username">
+                </p>
+                <p>
+                    <input type="password" placeholder="password" name="password" id="password">
+                </p>
+                <p>
+                    <input type="submit">
+                </p>
+                <p><a href="#">Create New Account</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        btn.onclick = () => {
+            btn.style.display = "none";
+            form.setAttribute("class", "show");
+            setTimeout(() => {
+                loginFormBtn.classList.add("showLoginIcon");
+                formBody.classList.add("showLoginIcon");
+            }, 1000);
+        }
+
+        let text = () => {
+
+            setTimeout(() => {
+                l.classList.add('text');
+                l2.classList.add('text');
+                setTimeout(() => {
+                    o.classList.add('text');
+                    o2.classList.add('text');
+                    setTimeout(() => {
+                        g.classList.add('text');
+                        g2.classList.add('text');
+                        setTimeout(() => {
+                            i.classList.add('text');
+                            i2.classList.add('text');
+                            setTimeout(() => {
+                                n.classList.add('text');
+                                n2.classList.add('text');
+                                setTimeout(() => {
+                                    l.classList.remove('text');
+                                    o.classList.remove('text');
+                                    g.classList.remove('text');
+                                    i.classList.remove('text');
+                                    n.classList.remove('text');
+                                    l2.classList.remove('text');
+                                    o2.classList.remove('text');
+                                    g2.classList.remove('text');
+                                    i2.classList.remove('text');
+                                    n2.classList.remove('text');
+                                }, 500);
+                            }, 500);
+                        }, 500);
+                    }, 500);
+                }, 500);
+            }, 500);
+
+        }
+
+        setInterval(text, 3000)
+    </script>
+
+</body>
+
+</html>
